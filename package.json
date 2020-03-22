@@ -21,5 +21,10 @@
     "eslint-plugin-react": "^7.19.0",
     "webpack": "^4.42.0",
     "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
   }
 }
