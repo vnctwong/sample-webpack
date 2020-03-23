@@ -13,8 +13,8 @@ class App extends Component {
     return (
       <div>
         <div>
-          <link to="/">Users</link> |
-          <link to="/Pizza">Pizza</link>
+          <Link to="/">Users</Link> |
+          <Link to="/Pizza">Pizza</Link>
         </div>
         <div>
           <Route path="/" exact component={Users} />

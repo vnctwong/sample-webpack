@@ -1,5 +1,6 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -21,7 +22,7 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_module/,
         use: [
-          { loader: 'style-laoder' },
+          { loader: 'style-loader' },
           {
             loader: 'css-loader', options: {
               importLoaders: 1,
@@ -43,5 +44,12 @@ module.exports = {
         loader: 'url-loader?limit=8000&name=images/[name].[ext]'
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: __dirname + '/src/index.html',
+      filename: 'index.html',
+      inject: 'body'
+    })
+  ]
 };
